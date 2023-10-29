@@ -9,5 +9,15 @@
       "UserName": "string1"
     }
   ],
-  "Todos": []
+  "Todos": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 2,
+        "UserName": "string1"
+      },
+      "Title": "string",
+      "IsCompleted": false
+    }
+  ]
 }
