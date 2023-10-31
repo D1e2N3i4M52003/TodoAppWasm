@@ -1,4 +1,5 @@
 ﻿using Application.LogicInterfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Models.DTOs;
@@ -14,7 +15,7 @@ public class UserController : ControllerBase
     {
         this.userLogic = userLogic;
     }
-    [HttpPost]
+    [HttpPost,AllowAnonymous]
     public async Task<ActionResult<User>> CreateAsync(UserCreationDto dto)
     {
         try
@@ -28,7 +29,7 @@ public class UserController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
-    [HttpGet]
+    [HttpGet,Authorize("MustBeUser")]
     public async Task<ActionResult<IEnumerable<User>>> GetAsync([FromQuery] string? username)
     {
         try

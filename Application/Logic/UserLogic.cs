@@ -21,7 +21,9 @@ public class UserLogic : IUserLogic
         ValidateData(userToCreate);
         User toCreate = new User
         {
-            UserName = userToCreate.UserName
+            UserName = userToCreate.UserName,
+            Role = "User",
+            Password = userToCreate.Password
         };
     
         User created = await userDao.CreateAsync(toCreate);
@@ -31,6 +33,10 @@ public class UserLogic : IUserLogic
     public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
     {
         return userDao.GetAsync(searchParameters);
+    }
+    public Task<User?> GetUserByUsername(string username)
+    {
+        return userDao.GetByUsernameAsync(username);
     }
 
     private static void ValidateData(UserCreationDto dto)

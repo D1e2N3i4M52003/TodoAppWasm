@@ -7,13 +7,14 @@ public class FileContext
 {
     private const string filePath = "data.json";
     private DataContainer? dataContainer;
-    public ICollection<Todo> Todos
+    public ICollection<Post> Posts
     {
         get
         {
             LoadData();
-            return dataContainer!.Todos;
+            return dataContainer!.Posts;
         }
+        set { }
     }
 
     public ICollection<User> Users
@@ -23,17 +24,17 @@ public class FileContext
             LoadData();
             return dataContainer!.Users;
         }
+        set { }
     }
 
     private void LoadData()
     {
         if (dataContainer != null) return;
-    
         if (!File.Exists(filePath))
         {
             dataContainer = new ()
             {
-                Todos = new List<Todo>(),
+                Posts = new List<Post>(),
                 Users = new List<User>()
             };
             return;

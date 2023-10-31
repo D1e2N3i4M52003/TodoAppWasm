@@ -2,22 +2,68 @@
   "Users": [
     {
       "Id": 1,
-      "UserName": "string"
+      "UserName": "string",
+      "Password": null,
+      "Role": null
     },
     {
       "Id": 2,
-      "UserName": "string1"
+      "UserName": "string1",
+      "Password": null,
+      "Role": null
+    },
+    {
+      "Id": 3,
+      "UserName": "User",
+      "Password": null,
+      "Role": null
+    },
+    {
+      "Id": 4,
+      "UserName": "denim2003",
+      "Password": null,
+      "Role": null
+    },
+    {
+      "Id": 5,
+      "UserName": "deny",
+      "Password": "denim2003",
+      "Role": "User"
     }
   ],
-  "Todos": [
+  "Posts": [
     {
       "Id": 1,
       "Owner": {
-        "Id": 2,
-        "UserName": "string1"
+        "Id": 5,
+        "UserName": "deny",
+        "Password": "denim2003",
+        "Role": "User"
       },
-      "Title": "string",
-      "IsCompleted": false
+      "Title": "Post",
+      "Body": "Something"
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Id": 5,
+        "UserName": "deny",
+        "Password": "denim2003",
+        "Role": "User"
+      },
+      "Title": "A post that Should work",
+      "Body": "It  is getting autorized correctly on the server side"
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 5,
+        "UserName": "deny",
+        "Password": "denim2003",
+        "Role": "User"
+      },
+      "Title": "Post",
+      "Body": "Something\n"
     }
   ]
 }
