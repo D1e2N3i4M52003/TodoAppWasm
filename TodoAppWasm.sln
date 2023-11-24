@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor", "Blazor\Blazor.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClients", "HttpClients\HttpClients.csproj", "{913266E4-374C-49F8-8D09-0A56049BA4E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{BF5E4299-CF00-47F7-8554-EFCB136B195D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,8 +47,15 @@ Global
 		{913266E4-374C-49F8-8D09-0A56049BA4E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{913266E4-374C-49F8-8D09-0A56049BA4E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{913266E4-374C-49F8-8D09-0A56049BA4E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5E4299-CF00-47F7-8554-EFCB136B195D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5E4299-CF00-47F7-8554-EFCB136B195D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5E4299-CF00-47F7-8554-EFCB136B195D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5E4299-CF00-47F7-8554-EFCB136B195D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27F57B37-1FF0-43BA-9F4B-FF306E64E2A4}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-﻿namespace FileData.DAOs;
+﻿namespace Models.DTOs;
 
 public class SearchPostParametersDto
 {

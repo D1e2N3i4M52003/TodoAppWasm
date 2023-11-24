@@ -1,9 +1,13 @@
-﻿namespace Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Models;
 
 public class Post
 {
+    [Required]
     public int Id { get; set; }
     public User Owner { get; }
+    public int OwnerId { get; }
     public string Title { get; }
     public string Body { get; set; }
     
@@ -13,5 +17,8 @@ public class Post
         Owner = owner;
         Title = title;
         Body = body;
+    }
+    public Post()
+    {
     }
 }
